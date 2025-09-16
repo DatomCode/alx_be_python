@@ -1,9 +1,9 @@
 task = input("Enter your task:").title()
-task_priority = input(
+priority = input(
     "Priority (high/medium/low):").lower().strip()
 time_bound = input(
     "Is it time-bound? (yes/no):").lower().strip() == "yes"
-match task_priority:
+match priority:
     case "high":
         if time_bound:
             print("'" + task + "'",
