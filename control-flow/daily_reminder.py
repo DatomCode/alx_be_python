@@ -1,31 +1,31 @@
-Task = input("What task do you want to be reminded of? ").title()
-Priority = input(
-    "What is the priority of this task (high, medium, low)? ").lower().strip()
-Time_Bound = input(
-    "Is this task time-bound? (yes/no) ").lower().strip() == "yes"
-match Priority:
+task = input("Enter your task:").title()
+task_priority = input(
+    "Priority (high/medium/low):").lower().strip()
+time_bound = input(
+    "Is it time-bound? (yes/no):").lower().strip() == "yes"
+match task_priority:
     case "high":
-        if Time_Bound:
-            print("'" + Task + "'",
+        if time_bound:
+            print("'" + task + "'",
                   " is a high priority task that requires immediate attention today!")
-        elif not Time_Bound:
-            print("'" + Task + "'",
+        elif not time_bound:
+            print("'" + task + "'",
                   " is a high priority task. Consider completing it when you have free time.")
 
     case "medium":
-        if Time_Bound:
-            print("'" + Task + "'",
+        if time_bound:
+            print("'" + task + "'",
                   " is a medium priority task that requires immediate attention today!")
-        elif not Time_Bound:
-            print("'" + Task + "'",
+        elif not time_bound:
+            print("'" + task + "'",
                   " is a medium priority task. Consider completing it when you have free time.")
 
     case "low":
-        if Time_Bound:
-            print("'" + Task + "'",
+        if time_bound:
+            print("'" + task + "'",
                   " is a low priority task that requires immediate attention today")
-        elif not Time_Bound:
-            print("'" + Task + "'",
+        elif not time_bound:
+            print("'" + task + "'",
                   " is a low priority task. Consider completing it when you have free time.")
 
     case _:
