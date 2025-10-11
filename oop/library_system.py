@@ -27,3 +27,23 @@ class PrintBook(Book):
 
     def __str__(self):
         return f"PrintBook: ({self.name} by {self.author}, Page Count: {self.page_count})"
+    
+
+
+
+class Library:
+    def __init__(self):
+        self.books = []
+    
+    def add_books(self, book):
+        self.books.append(book)
+        print(f"✅ '{book.title}' added to the library.")
+
+    def list_books(self):
+        if not self.books:
+            print("📚 The library is empty.")
+            return
+        print("\n📖 Library Collection:\n" + "-" * 30)
+        for book in self.books:
+            print(book.get_info())
+        print("-" * 30)
