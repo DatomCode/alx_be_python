@@ -13,8 +13,8 @@ class Rectangle(Shape):
         self.width = width
 
     def area(self):
-        area = self.length * self.width
-        return f"The area of the Rectangle is: {area}"
+        return self.length * self.width
+       
 
 
 class Circle(Shape):
@@ -22,5 +22,5 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        area = math.pi * (self.radius ** 2)
-        return f"The area of the Circle is: {area}"
+        return math.pi * (self.radius ** 2)
+        
