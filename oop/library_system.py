@@ -41,7 +41,6 @@ class Library:
         if not self.books:
             print("📚 The library is empty.")
             return
-        print("\n📖 Library Collection:\n" + "-" * 30)
         for book in self.books:
-            print(book.get_info())
-        print("-" * 30)
+            print(book)
+        
